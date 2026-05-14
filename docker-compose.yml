@@ -1,0 +1,13 @@
+services:
+  neo4j:
+    image: neo4j:5
+    ports:
+      - "7474:7474"   # Neo4j Browser (web sučelje)
+      - "7687:7687"   # Bolt protokol (aplikacijski driveri)
+    environment:
+      NEO4J_AUTH: neo4j/vjezba2026
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  neo4j_data:
